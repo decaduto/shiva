@@ -21,6 +21,7 @@
 #include <sys/prctl.h>
 #include <sys/wait.h>
 
+#include "hsearch.h"
 #include "include/capstone/capstone.h"
 
 #if defined(__ANDROID__) || defined(ANDROID)
