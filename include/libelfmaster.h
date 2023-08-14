@@ -34,7 +34,6 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <stdbool.h>
-#include <search.h>
 #include <sys/queue.h>
 #include <sys/stat.h>
 
