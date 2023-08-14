@@ -23,7 +23,12 @@
 
 #include "include/capstone/capstone.h"
 
-#include "/opt/elfmaster/include/libelfmaster.h"
+#ifdef __ANDROID__
+	#include "include/libelfmaster.h"
+#else
+	#include "/opt/elfmaster/include/libelfmaster.h"
+#endif
+
 #include "shiva_debug.h"
 #include "shiva_misc.h"
 
