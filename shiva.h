@@ -23,7 +23,7 @@
 
 #include "include/capstone/capstone.h"
 
-#ifdef __ANDROID__
+#if defined(__ANDROID__) || defined(ANDROID)
 	#include "include/libelfmaster.h"
 #else
 	#include "/opt/elfmaster/include/libelfmaster.h"
