@@ -1,48 +1,9 @@
 #if defined(ANDROID) || defined(__ANDROID__)
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
 #include <search.h>
-
-#ifndef SEARCH_HCREATE_R_H
-#define SEARCH_HCREATE_R_H
-
-#ifndef _ENTRY
-struct _ENTRY;
-#endif
-
-struct hsearch_data {
-	struct _ENTRY *table;
-	unsigned int size;
-	unsigned int filled;
-};
-
-inline int hcreate_r (size_t nel, struct hsearch_data *htab);
-inline void hdestroy_r (struct hsearch_data *htab);
-inline int hsearch_r (ENTRY item, ACTION action, ENTRY **retval, struct hsearch_data *htab);
-
-#endif /* SEARCH_HCREATE_R_H */
-
-#ifdef __cplusplus
-}
-#endif
-
-
-typedef struct _ENTRY {
-  unsigned int used;
-  ENTRY entry;
-} _ENTRY;
-
-struct hsearch_data {
-	struct _ENTRY *table;
-	unsigned int size;
-	unsigned int filled;
-};
 
 /* For the used double hash method the table size has to be a prime. To
    correct the user given table size we need a prime test.  This trivial
