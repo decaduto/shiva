@@ -37,7 +37,11 @@
 #include <link.h>
 #include <getopt.h>
 
-#include "/opt/elfmaster/include/libelfmaster.h"
+#if defined(__ANDROID__) || defined(ANDROID)
+	#include "../../include/libelfmaster.h"
+#else
+	#include "/opt/elfmaster/include/libelfmaster.h"
+#endif
 
 #define SHIVA_DT_NEEDED	DT_LOOS + 10
 #define SHIVA_DT_SEARCH DT_LOOS + 11
