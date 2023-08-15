@@ -1,0 +1,6 @@
+libgcc.a
+Scrt1.o
+crti.o
+crtbeginS.o
+crtendS.o
+crtn.o
