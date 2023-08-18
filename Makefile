@@ -5,7 +5,7 @@ GCC_OPTS= -fPIC -ggdb -c
 OBJ_LIST=shiva.o shiva_util.o shiva_signal.o shiva_ulexec.o shiva_auxv.o	\
     shiva_module.o shiva_trace.o shiva_trace_thread.o shiva_error.o shiva_maps.o shiva_analyze.o \
     shiva_callsite.o shiva_target.o shiva_xref.o shiva_transform.o shiva_so.o shiva_post_linker.o
-STATIC_LIBS=/opt/elfmaster/lib/libelfmaster.a libcapstone.a
+STATIC_LIBS=libelfmaster.a libcapstone.a
 CC=gcc
 MUSL=musl-gcc
 
